@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../../images/001-dental.png"
+import logo from "../../../images/fluride.png"
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
