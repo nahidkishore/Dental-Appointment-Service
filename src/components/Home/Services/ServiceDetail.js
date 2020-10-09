@@ -5,7 +5,7 @@ const ServiceDetail = ({ service }) => {
     <div className="col-md-4 text-center">
       <img style={{height:'50px'}} src={service.img} alt="" />
       <h5 className="mt-3 mb-3">{service.name}</h5>
-      <p className="text-secondary" style={{textAlign:'justify'}}>{service.description}</p>
+      <p className="text-secondary" >{service.description}</p>
     </div>
   );
 };

@@ -1,0 +1,16 @@
+.contact{
+  background-image: url(../../../images/chair-Bg.png);
+  position: relative;
+  z-index: 1;
+
+}
+.contact::before{
+  position: absolute;
+  content: "";
+  top:0;
+  width: 100%;
+  height: 100%;
+  background: rgb(12, 11, 27);
+  opacity: .9;
+  z-index: -1;
+}
