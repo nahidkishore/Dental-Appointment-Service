@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { UserContext } from "../../../App";
 import logo from "../../../images/fluride.png"
 const Navbar = () => {
+  const [loggedInUser,setLoggedInUser]=useContext(UserContext);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <a className="navbar-brand" href="#">
-     <img src={logo} alt="" className="img-fluid ml-5 py-2" width="50px"/>
+  <img src={logo} alt="" className="img-fluid ml-5 py-2" width="50px"/> <p>{loggedInUser.name}</p>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>

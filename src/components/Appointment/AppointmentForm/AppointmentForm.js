@@ -14,13 +14,12 @@ const customStyles = {
 };
 Modal.setAppElement("#root");
 
-const AppointmentForm = ({ modalIsOpen, closeModal,date,appointmentOn }) => {
-  const { register, handleSubmit, watch, errors } = useForm();
+const AppointmentForm = ({ modalIsOpen, closeModal, date, appointmentOn }) => {
+  const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-  }; // your form submit function which will invoke after successful validation
-
-  console.log(watch("example"));
+    closeModal();
+  };
 
   return (
     <div>
@@ -31,8 +30,10 @@ const AppointmentForm = ({ modalIsOpen, closeModal,date,appointmentOn }) => {
         contentLabel="Example Modal"
       >
         <h2 className="text-center text-brand">{appointmentOn}</h2>
-        <button onClick={closeModal}>close</button>
-        <p className="text-secondary text-center"><small>ON</small></p>
+        <button onClick={closeModal}>X</button>
+        <p className="text-secondary text-center">
+          <small className="text-brand">ON {date.toDateString()}</small>
+        </p>
         <form className="p-5" onSubmit={handleSubmit(onSubmit)}>
           <div className="form-group">
             <input
