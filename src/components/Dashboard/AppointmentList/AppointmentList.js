@@ -5,9 +5,9 @@ const AppointmentList = ({appointments}) => {
     <table className="table table-borderless">
       <thead>
         <tr>
-          <th className="text-primary">Name</th>
-          <th className="text-primary">Phone</th>
-          <th className="text-primary">EMail</th>
+          <th className="text-primary" scope="col">Name</th>
+          <th className="text-primary" scope="col">Phone</th>
+          <th className="text-primary" scope="col">EMail</th>
         </tr>
      
       </thead>

@@ -1,50 +1,41 @@
 import React, { useContext } from "react";
+import { NavLink, useHistory } from "react-router-dom";
 import { UserContext } from "../../../App";
 import logo from "../../../images/fluride.png"
 const Navbar = () => {
   const [loggedInUser,setLoggedInUser]=useContext(UserContext);
+const history = useHistory();
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
-      <a className="navbar-brand" href="#">
-  <img src={logo} alt="" className="img-fluid ml-5 py-2" width="50px"/> <p>{loggedInUser.name}</p>
+      <a className="navbar-brand" href="">
+  <img onClick={()=> history.push('/')} src={logo} alt="" className="img-fluid ml-5 py-2" width="50px"/> <p>{loggedInUser.name}</p>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <div className="collapse navbar-collapse" id="navbarTogglerDemo02" >
         <ul className="navbar-nav ml-auto">
           <li className="nav-item active">
-            <a className="nav-link mr-5" href="#">
-              Home <span className="sr-only">(current)</span>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link mr-5" href="#">
-              About
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link mr-5" href="#">
-              Dental Services
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link mr-5 text-white">
-              Reviews
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link mr-5 text-white" href="#">
-              Blog
-            </a>
+          <NavLink to="/home" className="nav-link mr-5" style={{textDecoration:'none'}}>Home</NavLink>
           </li>
         
           <li className="nav-item">
-            <a className="nav-link mr-5 text-white" href="#">
-              Contact Us
-            </a>
+          <NavLink to="/appointment" className="nav-link mr-5" style={{textDecoration:'none'}}>Appointment</NavLink>
+          </li>
+          <li className="nav-item">
+          <NavLink to="/appointment" className="nav-link mr-5" style={{textDecoration:'none'}}>Reviews</NavLink>
+          </li>
+          <li className="nav-item">
+          <NavLink to="/appointment" className="nav-link mr-5" style={{textDecoration:'none',color:'white'}}>Blogs</NavLink>
+          </li>
+        
+          <li className="nav-item">
+          <NavLink to="/appointment" className="nav-link mr-5" style={{textDecoration:'none',color:'white'}}>Contact Us</NavLink>
+          </li>
+          <li className="nav-item">
+          <NavLink to="/appointment" className="nav-link mr-5 " style={{textDecoration:'none',color:'white'}}>About</NavLink>
           </li>
         </ul>
       </div>
