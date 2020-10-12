@@ -22,13 +22,13 @@ function App() {
           <Route exact path="/home">
             <Home></Home>
           </Route>
-          <PrivateRoute path="/appointment">
+          <Route path="/appointment">
             <Appointment></Appointment>
-          </PrivateRoute>
-
-          <Route path="/dashboard/appointment">
-            <Dashboard></Dashboard>
           </Route>
+
+          <PrivateRoute path="/dashboard/appointment">
+            <Dashboard></Dashboard>
+          </PrivateRoute>
           <Route path="/login">
             <Login></Login>
           </Route>
