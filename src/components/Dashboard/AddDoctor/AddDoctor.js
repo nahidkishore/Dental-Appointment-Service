@@ -16,22 +16,22 @@ const AddDoctor = () => {
   }
   const handleSubmit = () => {
     const formData = new FormData()
-    console.log(info);
-    formData.append('file', file);
-    formData.append('name', info.name);
-    formData.append('email', info.email);
+  formData.append('file', file)
+  formData.append('name', info.name)
+  formData.append('email', info.email)
 
-    fetch('localhost:5000/addADoctor', {
-        method: 'POST',
-        body: formData
-    })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-        })
-        .catch(error => {
-            console.error(error)
-        })
+  fetch('http://localhost:5000/addADoctor', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+  })
+  .catch(error => {
+    console.error(error)
+  })
+   
 }
   return (
     <section className="container-fluid row">

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { NavLink, useHistory } from "react-router-dom";
+import { Link, NavLink, useHistory } from "react-router-dom";
 import { UserContext } from "../../../App";
 import logo from "../../../images/fluride.png"
 const Navbar = () => {
@@ -16,27 +16,32 @@ const history = useHistory();
   </button>
 
       <div className="collapse navbar-collapse" id="navbarTogglerDemo02" >
-        <ul className="navbar-nav ml-auto">
+        <ul className="navbar-nav ml-auto" style={{fontSize:' 1.42em'}}>
           <li className="nav-item active">
-          <NavLink to="/home" className="nav-link mr-5" style={{textDecoration:'none'}}>Home</NavLink>
+          <Link className="nav-link mr-5" to="/">Home</Link>
+          </li>
+          <li className="nav-item">
+               <Link className="nav-link mr-5 " to="/login">Login</Link>
+           </li>
+
+          <li className="nav-item">
+       
+          <Link className="nav-link mr-5 text-white" to="/dashboard/AllPatients">Patients</Link>
+          </li>
+          <li className="nav-item">
+  
+          <Link className="nav-link mr-5 text-white" to="dashboard/appointment">Dashboard</Link>
           </li>
         
           <li className="nav-item">
-          <NavLink to="/appointment" className="nav-link mr-5" style={{textDecoration:'none',color:'white'}}>Appointment</NavLink>
-          </li>
-          <li className="nav-item">
-          <NavLink to="/appointment" className="nav-link mr-5" style={{textDecoration:'none',color:'white'}}>Reviews</NavLink>
-          </li>
-          <li className="nav-item">
-          <NavLink to="/appointment" className="nav-link mr-5" style={{textDecoration:'none',color:'white'}}>Blogs</NavLink>
+          
+          <Link className="nav-link mr-5 text-white" to="/appointment">Admin</Link>
           </li>
         
-          <li className="nav-item">
-          <NavLink to="/appointment" className="nav-link mr-5" style={{textDecoration:'none',color:'white'}}>Contact Us</NavLink>
-          </li>
-          <li className="nav-item">
-          <NavLink to="/appointment" className="nav-link mr-5 " style={{textDecoration:'none',color:'white'}}>About</NavLink>
-          </li>
+      
+            <li className="nav-item">
+             <Link className="nav-link mr-5 text-white" to="#">Contact Us</Link>
+             </li>
         </ul>
       </div>
     </nav>
