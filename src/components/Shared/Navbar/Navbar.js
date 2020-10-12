@@ -22,10 +22,10 @@ const history = useHistory();
           </li>
         
           <li className="nav-item">
-          <NavLink to="/appointment" className="nav-link mr-5" style={{textDecoration:'none'}}>Appointment</NavLink>
+          <NavLink to="/appointment" className="nav-link mr-5" style={{textDecoration:'none',color:'white'}}>Appointment</NavLink>
           </li>
           <li className="nav-item">
-          <NavLink to="/appointment" className="nav-link mr-5" style={{textDecoration:'none'}}>Reviews</NavLink>
+          <NavLink to="/appointment" className="nav-link mr-5" style={{textDecoration:'none',color:'white'}}>Reviews</NavLink>
           </li>
           <li className="nav-item">
           <NavLink to="/appointment" className="nav-link mr-5" style={{textDecoration:'none',color:'white'}}>Blogs</NavLink>

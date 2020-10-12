@@ -1,6 +1,7 @@
 import React, { createContext, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Appointment from "./components/Appointment/Appointment/Appointment";
+import AddDoctor from "./components/Dashboard/AddDoctor/AddDoctor";
 import AllPatients from "./components/Dashboard/AllPatients/AllPatients";
 import Calender from "./components/Dashboard/Calender/Calender";
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route path="/dashboard/AllPatients">
             <AllPatients></AllPatients>
+          </Route>
+          <Route path="/dashboard/addDoctor">
+            <AddDoctor></AddDoctor>
           </Route>
           <Route exact path="/dashboard/calender">
             <Calender></Calender>
