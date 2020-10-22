@@ -24,3 +24,7 @@ A full-stack web app where patients can pick a date and time and then recommend 
 * Firebase 
 * Heroku
 
+
+## Screenshots 
+
+![ScreenShot] (s1.jpg)
