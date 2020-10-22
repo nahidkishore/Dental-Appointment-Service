@@ -69,7 +69,7 @@ const Login = () => {
           </div>
           <div className="form-group mt-5">
             <button className="btn btn-brand" onClick={handleGoogleSignIn}>
-              Login
+             Google Sign In
             </button>
           </div>
         </div>
