@@ -27,4 +27,4 @@ A full-stack web app where patients can pick a date and time and then recommend 
 
 ## Screenshots 
 
-![ScreenShot] (s1.jpg)
+![s1](https://user-images.githubusercontent.com/39863835/96923223-c7a37c80-14d2-11eb-8977-f7b2a8736f40.jpg)
