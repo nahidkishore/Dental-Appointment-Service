@@ -35,12 +35,12 @@ const history = useHistory();
         
           <li className="nav-item">
           
-          <Link className="nav-link mr-5 text-white" to="/appointment">Admin</Link>
+          <Link className="nav-link mr-5 text-white" to="/appointment">Appointment</Link>
           </li>
         
       
             <li className="nav-item">
-             <Link className="nav-link mr-5 text-white" to="#">Contact Us</Link>
+             <Link className="nav-link mr-5 text-white" to="/">Contact Us</Link>
              </li>
         </ul>
       </div>

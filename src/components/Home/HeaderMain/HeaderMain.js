@@ -16,7 +16,7 @@ const HeaderMain = () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos,
           sunt enim fuga deserunt recusandae facilis.
         </p>
-        <button onClick={handleAppointment} className="btn btn-primary">
+        <button onClick={handleAppointment} className="btn btn-success">
           GET APPOINMENT
         </button>
       </div>
